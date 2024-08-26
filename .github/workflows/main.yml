@@ -23,7 +23,7 @@ jobs:
     - name: Checkout NuttX repo
       uses: actions/checkout@v3
       with:
-        repository: TakuyaMiyasita:nuttx
+        repository: TakuyaMiyasita/nuttx
         fetch-depth: 0
         ref: test/mermaid
         path: nuttx
