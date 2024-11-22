@@ -36,6 +36,8 @@ jobs:
         echo " Install Pipenv"
         echo "======================================================="
 
+        sudo apt-get install npm
+        npm install -g @mermaid-js/mermaid-cli
         pip3 install pipenv
 
         echo "======================================================="
@@ -67,6 +69,7 @@ jobs:
           echo " ====> PIPENV INSTALL."
 
           pipenv install
+          pipenv install sphinxcontrib-mermaid
 
           if [ "$nuttx_version" = "master" ]; then
             OUTDIR="$DOCDIR/latest"
